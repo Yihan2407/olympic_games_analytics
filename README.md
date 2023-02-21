@@ -19,4 +19,4 @@
 | Event |	Specific event within the sport in which the athlete participated |
 | Medal |	Type of medal won by the athlete (Gold, Silver, Bronze or NA if the athlete did not win a medal) |
 
-Here, I used PostgreSQL to conduct Exploratory Data Analysis on the Olympic Games dataset containing over 200,000 rows for the 1896 - 2016 Summer Olympic Games.
+
