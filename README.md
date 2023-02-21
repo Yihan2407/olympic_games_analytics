@@ -1,4 +1,4 @@
-# 1896 - 2016 Summer Olympic Games Data Exploration with SQL
+# 1896 - 2016 Summer Olympic Games: Data Exploration with SQL
 
 ### Data Dictionary
 | Column   | Description      |
