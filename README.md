@@ -1,1 +1,1 @@
-# olympic_games_analytics
+# 1896 - 2016 Summer Olympic Games Data Exploration with SQL
