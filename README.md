@@ -1,6 +1,8 @@
 # 1896 - 2016 Summer Olympic Games Data Exploration with SQL
 
 **Data Dictionary:** 
+| Column   | Description      |
+| -------  | ----------       |
 ID:	Unique identifier for each athlete
 Name:	Name of the athlete
 Sex:	Gender of the athlete
