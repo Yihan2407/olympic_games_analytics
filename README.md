@@ -3,7 +3,7 @@
 **Data Dictionary:** 
 | Column   | Description      |
 | -------  | ----------       |
-ID:	Unique identifier for each athlete
+|ID |	Unique identifier for each athlete |
 Name:	Name of the athlete
 Sex:	Gender of the athlete
 Age:	Age of the athlete (in years)
