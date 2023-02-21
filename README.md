@@ -1,6 +1,6 @@
 # 1896 - 2016 Summer Olympic Games Data Exploration with SQL
 
-**Data Dictionary:** 
+###**Data Dictionary:** 
 | Column   | Description      |
 | -------  | ----------       |
 | ID |	Unique identifier for each athlete |
