@@ -12,9 +12,7 @@ CREATE TABLE noc_regions (
 	Region varchar(255),
 	PRIMARY KEY (NOC)
 );
-
 COPY noc_regions FROM 'C:\Users\yihan\OneDrive\Desktop\Projects\noc_regions.csv' DELIMITER ',' CSV HEADER;
-
 CREATE TABLE olympic_data (
     ID integer,
     Name varchar(255),
@@ -33,8 +31,6 @@ CREATE TABLE olympic_data (
     Medal varchar(255),
 	FOREIGN KEY (NOC) REFERENCES noc_regions (NOC)
 );
-
-
 COPY olympic_data FROM 'C:\Users\yihan\OneDrive\Desktop\Projects\athlete_events.csv' DELIMITER ',' CSV HEADER NULL 'NA';
 */
 
@@ -222,3 +218,22 @@ USING (NOC)
 WHERE noc_regions.region = 'China' AND olympic_data.medal IS NOT NULL
 GROUP BY medal
 ORDER BY array_position(array['Bronze', 'Silver', 'Gold'], medal) -- Custom Order
+
+-- Cumulative Sum of Medals won by China over all Olympic Games
+WITH cte AS (
+	SELECT 
+		games, 
+		SUM(CASE WHEN medal = 'Gold' THEN 1 ELSE 0 END) AS n_gold_medals,
+		SUM(CASE WHEN medal = 'Silver' THEN 1 ELSE 0 END) AS n_silver_medals,
+		SUM(CASE WHEN medal = 'Bronze' THEN 1 ELSE 0 END) AS n_bronze_medals
+	FROM olympic_data
+	WHERE team = 'China'
+	GROUP BY games
+	)
+	
+SELECT
+	games, 
+	SUM(n_gold_medals) OVER (ORDER BY games) as cumulative_gold_medals,
+	SUM(n_silver_medals) OVER (ORDER BY games) as cumulative_silver_medals,
+	SUM(n_bronze_medals) OVER (ORDER BY games) as cumulative_bronze_medals
+FROM cte
