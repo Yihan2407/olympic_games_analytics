@@ -19,4 +19,4 @@
 | Event |	Specific event within the sport in which the athlete participated |
 | Medal |	Type of medal won by the athlete (Gold, Silver, Bronze or NA if the athlete did not win a medal) |
 
-More information regarding the dataset may be found [here](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results). 
+More information pertaining to the dataset may be found [here](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results). 
